@@ -1,13 +1,13 @@
-import { ErrorCode } from "src/constants/enums/error-code.enum";
+import { HttpStatus } from "@nestjs/common";
 
 export class BaseResponse<T> {
     data: T;
-    code: number;
+    statusCode: number;
     message: string;
 
-    constructor(data: T, code: ErrorCode, message: string) {
+    constructor(data: T, statusCode: HttpStatus, message: string) {
         this.data = data;
-        this.code = code;
+        this.statusCode = statusCode;
         this.message = message;
     }
 }

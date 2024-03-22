@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: novel_sql_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: novel-sql
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
