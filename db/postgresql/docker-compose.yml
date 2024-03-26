@@ -9,4 +9,6 @@ services:
     environment:
       POSTGRES_DB: novel-sql
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: secret
+      POSTGRES_PASSWORD: secret 
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
