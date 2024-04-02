@@ -3,7 +3,7 @@ import { HydratedDocument } from 'mongoose';
 
 export type ChapterDocument = HydratedDocument<Chapter>;
 
-@Schema({ collection: 'chapters'})
+@Schema({ collection: 'chapters', })
 export class Chapter {
     @Prop()
     title: string;

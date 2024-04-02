@@ -30,7 +30,7 @@ model Chapter {
   id            Int      @id @default(autoincrement())
   novelId       Int      // Reference to the Novel it belongs to
   novel         Novel    @relation(fields: [novelId], references: [id])
-  chapterNumber Int
+  chapterId     String
   title         String
   content       String
 
@@ -39,5 +39,5 @@ model Chapter {
   updatedAt     DateTime @updatedAt
 
   // Unique constraint for (novelId, chapterNumber) pair
-  @@unique([novelId, chapterNumber])
+  @@unique([novelId, chapterId])
 }

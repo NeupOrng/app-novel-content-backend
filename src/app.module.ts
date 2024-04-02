@@ -12,7 +12,7 @@ import { ChapterDocument, Chapter, ChapterSchema } from './repositories/nosql/ch
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.MONGODB_URI),
+    MongooseModule.forRoot(process.env.MONGODB_URI, {dbName: 'novel-app'}),
     MongooseModule.forFeature([{ name: Chapter.name, schema: ChapterSchema },])
   ],
   controllers: [AppController, NovelController],

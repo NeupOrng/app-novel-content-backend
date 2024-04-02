@@ -9,5 +9,6 @@ services:
     volumes:
       - ./data:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_USERNAME=novel-app
       - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=novel-app
